@@ -7,3 +7,7 @@ export interface IforecastIcon {
 export interface IForecastIcons {
   [key: string]: IconDefinition;
 }
+
+export interface IForecastIconsColor {
+  [key: string]: string;
+}
