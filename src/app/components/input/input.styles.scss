@@ -1,0 +1,17 @@
+.input-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-height: 2.5rem;
+}
+
+.input {
+  width: 100%;
+  max-width: 290px;
+  height: 100%;
+  padding-left: 0.5rem;
+  border-radius: 0.2rem;
+  border: none;
+}
