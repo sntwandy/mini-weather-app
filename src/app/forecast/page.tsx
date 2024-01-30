@@ -145,7 +145,7 @@ const Forecast = (): ReactElement => {
       getForecast(data.data.list);
       getActualWeather(data.data.list[0]);
     });
-  }, []);
+  }, [BASE_URL]);
 
   return (
     <>
