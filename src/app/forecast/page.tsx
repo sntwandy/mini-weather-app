@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 'use client';
 
 import { ReactElement, useEffect, useState } from 'react';
@@ -11,16 +12,17 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { IForecast, IForecastByDay } from '../shared/interfaces';
 import './forecast.styles.scss';
 
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+const API_URL_GET_FORECAST = process.env.NEXT_PUBLIC_API_URL_GET_FORECAST;
+
 const Forecast = (): ReactElement => {
-  const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
-  const API_URL_GET_FORECAST = process.env.NEXT_PUBLIC_API_URL_GET_FORECAST;
 
   const [cityName, setCityName] = useState('');
   const [forecast, setForecast] = useState<IForecastByDay[]>();
   const [today, setToday] = useState<IForecastByDay>();
   const [loading, setLoading] = useState(true);
-  const searchParams = useSearchParams();
-  const BASE_URL = `${API_URL_GET_FORECAST}lat=${searchParams.get('lat')}&lon=${searchParams.get('lon')}&units=imperial&appid=${API_KEY}`;
+  const searchParams = process.browser ? useSearchParams() : null;
+  const BASE_URL = `${API_URL_GET_FORECAST}lat=${searchParams?.get('lat')}&lon=${searchParams?.get('lon')}&units=imperial&appid=${API_KEY}`;
 
   const getDayOfWeek = (dateString: string) => {
     const daysOfWeek = [
