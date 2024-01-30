@@ -12,17 +12,17 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { IForecast, IForecastByDay } from '../shared/interfaces';
 import './forecast.styles.scss';
 
-const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
-const API_URL_GET_FORECAST = process.env.NEXT_PUBLIC_API_URL_GET_FORECAST;
 
 const Forecast = (): ReactElement => {
+  const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+  const API_URL_GET_FORECAST = process.env.NEXT_PUBLIC_API_URL_GET_FORECAST;
 
   const [cityName, setCityName] = useState('');
   const [forecast, setForecast] = useState<IForecastByDay[]>();
   const [today, setToday] = useState<IForecastByDay>();
   const [loading, setLoading] = useState(true);
   const searchParams = process.browser ? useSearchParams() : null;
-  const BASE_URL = `${API_URL_GET_FORECAST}lat=${searchParams?.get('lat')}&lon=${searchParams?.get('lon')}&units=imperial&appid=${API_KEY}`;
+  const BASE_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${searchParams?.get('lat')}&lon=${searchParams?.get('lon')}&units=imperial&appid=acbfb220a9c2a5a33515edd5dafae202`;
 
   const getDayOfWeek = (dateString: string) => {
     const daysOfWeek = [
