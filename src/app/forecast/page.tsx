@@ -22,7 +22,7 @@ const Forecast = (): ReactElement => {
   const [today, setToday] = useState<IForecastByDay>();
   const [loading, setLoading] = useState(true);
   const searchParams = process.browser ? useSearchParams() : null;
-  const BASE_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${searchParams?.get('lat')}&lon=${searchParams?.get('lon')}&units=imperial&appid=acbfb220a9c2a5a33515edd5dafae202`;
+  const BASE_URL = `${API_URL_GET_FORECAST}lat=${searchParams?.get('lat')}&lon=${searchParams?.get('lon')}&units=imperial&appid=${API_KEY}`;
 
   const getDayOfWeek = (dateString: string) => {
     const daysOfWeek = [
