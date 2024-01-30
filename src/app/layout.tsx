@@ -19,7 +19,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></meta>
+      <title>Mini Weather App</title>
+      <meta
+        name='viewport'
+        content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'
+      ></meta>
+      <meta
+        name='description'
+        content="Mini Weather App to know the forecast of 5 days"
+      />
       <body className={inter.className}>
         {children}
         <span className='developed-by'>Developed by: @sntwandy</span>
