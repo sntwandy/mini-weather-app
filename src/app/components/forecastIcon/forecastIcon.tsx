@@ -1,12 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { forecastIconColor, forecastIcons } from './forecastIcon.directory';
 import { FC, ReactElement } from "react";
-import { IforecastIcon } from "./interfaces";
+import './forecastIcon.styles.scss'
+import { IForecastIcon } from "@/app/shared/interfaces";
 
-const forecastIcon: FC<IforecastIcon> = ({ iconName }): ReactElement => {
+const forecastIcon: FC<IForecastIcon> = ({ iconName }): ReactElement => {
   return (
     <FontAwesomeIcon
-      style={{ color: forecastIconColor[iconName], width: '50px', height: '50px' }}
+      className='light-speed-in'
+      style={{
+        color: forecastIconColor[iconName],
+        width: '50px',
+        height: '50px',
+      }}
       icon={forecastIcons[iconName]}
     />
   );
