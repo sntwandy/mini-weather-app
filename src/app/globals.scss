@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.developed-by {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  margin-top: 5rem;
+}
