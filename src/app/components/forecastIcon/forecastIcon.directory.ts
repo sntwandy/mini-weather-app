@@ -9,7 +9,7 @@ export const forecastIcons: IForecastIcons = {
 }
 
 export const forecastIconColor: IForecastIconsColor = {
-  sun: '#F28C38',
+  sun: '#FFE87C',
   moon: '#F5F3CE',
   cloud: '#C2BFBA',
   lightning: '#00bfff',
