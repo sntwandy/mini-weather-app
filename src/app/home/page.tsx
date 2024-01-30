@@ -14,7 +14,7 @@ const Home = (): ReactElement => {
   const [cityList, setCityList] = useState<IResults[]>();
 
   useEffect(() => {
-    const BASE_URL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=10&appid=acbfb220a9c2a5a33515edd5dafae202`;
+    const BASE_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=10&appid=acbfb220a9c2a5a33515edd5dafae202`;
     cityName?.length &&
       axios.get(BASE_URL).then((data) => {
         setCityList(
