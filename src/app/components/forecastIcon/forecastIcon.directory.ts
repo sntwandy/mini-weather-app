@@ -1,4 +1,4 @@
-import { IForecastIcons, IForecastIconsColor } from './interfaces';
+import { IForecastIcons, IForecastIconsColor } from '@/app/shared/interfaces';
 import { faSun, faMoon, faCloud, faBoltLightning } from '@fortawesome/free-solid-svg-icons';
 
 export const forecastIcons: IForecastIcons = {
